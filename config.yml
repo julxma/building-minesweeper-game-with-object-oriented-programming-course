@@ -6,13 +6,103 @@ template:
   repo: building-minesweeper-game-with-object-oriented-programming-template
   name: building-minesweeper-game-with-object-oriented-programming
 before:
-  - type: createIssue
-    title: Welcome!
-    body: new-issue.md
+  - type: createPullRequest
+    title: Welcome to Building Minesweeper!
+    body: S1.md
+    head: this-branch
 steps:
-  - title: First step
-    description: The first step in your course
-    event: issues.assigned
+  - title: The Cells
+    description: Learn what is the Minsweeper Board is mostly composed of and how to make this component.
+    event: issue_comment.created
     link: '{{ repoUrl }}'
     actions:
-      - type: closeIssue
+      - type: respond
+        with: S2.md
+      - type: gate
+      - type: respond
+        with: S2C1.md
+      - type: gate
+        left: payload.
+  
+  - title: The Board Class
+    description: Learn to create a Board class for the game that will be the foundation.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S3.md
+      - type: repond
+        with: S3C1.md
+      - type: repond
+        with: S3C2.md
+      - type: repond
+        with: S3C3.md
+      - type: repond
+        with: S3C4.md
+
+   - title: Board Class Methods
+    description: Learn how the the Board class contrubutes to the game and the importance of each step.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S4.md
+      - type: repond
+        with: S4C1.md
+      - type: repond
+        with: S4C2.md
+      - type: repond
+        with: S4C3.md
+      - type: repond
+        with: S4C4.md
+      - type: repond
+        with: S4C5.md
+      - type: repond
+        with: S4C6.md
+      - type: repond
+        with: S4C7.md
+      - type: repond
+        with: S4C8.md
+
+  - title: The Actual Board
+    description: Learn how to use the Board class to help us make the set of boards for the game.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S5.md
+      - type: repond
+        with: S5C1.md
+
+  - title: Making Moves I
+    description: Learn how to recive input and control the game based on user-input.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S6.md
+      - type: repond
+        with: S6C1.md
+
+  - title: Making Moves II
+    description: Learn make sure the game is able to be played properly by the user.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S7.md
+      - type: repond
+        with: S7C1.md
+
+  - title: Testing your code!
+    description: Learn how to test your program and make sure it runs the way you want it to.
+    event: issue_comment.created
+    link:
+    actions: 
+      - type: respond
+        with: S8.md
+      - type: repond
+        with: S8C1.md
+      # gate check to make sure learner typed code, next give solution and ending statement
+      - type: respond
+        with: S8C2.md
