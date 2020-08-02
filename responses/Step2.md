@@ -1,0 +1,26 @@
+## The First Most Important Part of the Game 
+
+What is the Minesweeper board composed of? Squares or as we will call it in our program, cells!
+
+Let's create a cell object that we can use for our Minesweeper board! We can do this by building a Cell class.
+
+A cell can be visible, flagged, and/or has a mine in it.
+
+- A visible cell means that it has been selected by the user.
+- A flagged cell means that it has been flagged by the user.
+- A cell can also have a mine in it.
+
+Each of those attributes of the cell has its own setters:
+
+- A method that shows what is inside the cell by making the cell visible.
+- A method that flags the cell.
+- A method that places a mine in the cell.
+
+First we will build our contructor to initialize attributes in the `Cell` class. Attributes of the cell class is mentioned above.
+
+```
+def __init__(self, is_mine, is_visible=False, is_flagged=False):
+        self.is_mine = is_mine
+        self.is_visible = is_visible
+        self.is_flagged = is_flagged
+```
