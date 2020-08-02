@@ -1,0 +1,18 @@
+title: Building Minesweeper Game with Object-Oriented-Programming
+description: >-
+  In this course, we will build the classic minesweeper game using Python.
+  Previous knowledge is recommended but not required.
+template:
+  repo: building-minesweeper-game-with-object-oriented-programming-template
+  name: building-minesweeper-game-with-object-oriented-programming
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
